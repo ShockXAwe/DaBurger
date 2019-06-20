@@ -1,0 +1,46 @@
+li {
+    padding: 5px;
+    margin: 5px;
+    background: #faebd7;
+  }
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .create-update-form {
+    padding: 5px;
+    margin: 5px;
+    background: aqua;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+  }
+
+  #notReadyEat {
+    background-color: red;
+    box-sizing: border-box;
+    font-size: 10px;
+    width: 50%;
+    /* height: 500px; */
+
+  }
+  
+  #readyEat {
+    background-color: green;
+    box-sizing: border-box;
+    font-size: 10px;
+    width: 50%;
+    /* height: 500px; */
+
+  }
+
+  .jumbotron {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+  

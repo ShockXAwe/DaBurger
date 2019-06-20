@@ -1,0 +1,62 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Burger Time</h1>
+  </div>
+</div>
+
+
+<div id="readyEat">
+  <div class="row">
+    <div class="col-6">
+      <h4>Burgers that are ready to be eaten!</h2>
+
+        <ul>
+          {{#each burgers}}
+          {{#unless eaten}}
+          {{> burgers/burger-block eat=true}}
+          {{/unless}}
+          {{/each}}
+        </ul>
+    </div>
+  </div>
+</div>
+
+<div id="notReadyEat">
+  <div class="col-6">
+    <h4>Burgers that have been eaten:</h2>
+
+      <ul>
+        {{#each burgers}}
+        {{#if eaten}}
+        {{> burgers/burger-block eat=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+  </div>
+</div>
+
+
+<br>
+<br>
+
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+
+  <div class="form-group" id="hideDiv">
+    <label for="slee">Eaten?</label><br>
+    <input type="radio" name="eaten" value="0" checked> Eaten!<br>
+    <input type="radio" name="eaten" value="1"> NotEaten
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+
+<script>
+  $("#hideDiv").hide();
+</script>
